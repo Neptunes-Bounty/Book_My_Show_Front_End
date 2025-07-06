@@ -43,7 +43,7 @@ function Navigation() {
           <Col>
             <Nav className="justify-content-center" activeKey="/home">
               <Nav.Item>
-                <Nav.Link href="/future-integration">Dashboard</Nav.Link>
+                <Nav.Link href="/profile">Profile</Nav.Link>
               </Nav.Item>
               <Nav.Item>
                 <Nav.Link href="/future-integration">Payments</Nav.Link>

@@ -67,10 +67,21 @@ export default function TrainBooking() {
 
   function buttonanimation(e2) {
     if (clicked === false && count !== 0) {
+      if (Price > userBalance) {
+        alert('Insufficient balance!');
+        return;
+      }
       clicked = true;
       e2.target.innerText = "";
       tl.to("#button", { width: "50px", duration: 0.5 });
       tl.to(ref, { y: "0%", duration: 0.5 });
+      // Store last booking info
+      localStorage.setItem('lastBooking', JSON.stringify({
+        type: 'Train',
+        name: train.name,
+        count: count,
+        price: Price
+      }));
       let data = {
         trainId: id,
         trainName: train.name,

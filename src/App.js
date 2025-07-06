@@ -13,6 +13,7 @@ import Concerts from "./components/Concerts";
 import ConcertBooking from "./components/ConcertBooking";
 import Trains from "./components/Trains";
 import TrainBooking from "./components/TrainBooking";
+import Profile from "./components/Profile";
 function App() {
   return (
       <Routes>
@@ -34,6 +35,7 @@ function App() {
         <Route path="/signup" element= {<SignUp />} />
         <Route path="/trains" element={<Trains />} />
         <Route path="/booking-train/:id" element={<TrainBooking />} />
+        <Route path="/profile" element={<Profile />} />
       </Routes>
   );
 }

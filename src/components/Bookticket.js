@@ -57,6 +57,16 @@ export default function Bookticket(props) {
         Price: Price,
         count: count,
       };
+      // Store last booking info
+      localStorage.setItem(
+        "lastBooking",
+        JSON.stringify({
+          type: "Movie",
+          name: props.name,
+          count: count,
+          price: Price,
+        })
+      );
       let fetchoption = {
         method: "POST",
         headers: { "Content-Type": "application/json" },

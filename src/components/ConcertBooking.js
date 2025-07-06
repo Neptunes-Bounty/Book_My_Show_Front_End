@@ -72,7 +72,13 @@ export default function ConcertBooking() {
       e2.target.innerText = "";
       tl.to("#button", { width: "50px", duration: 0.5 });
       tl.to(ref, { y: "0%", duration: 0.5 });
-      
+      // Store last booking info
+      localStorage.setItem('lastBooking', JSON.stringify({
+        type: 'Concert',
+        name: concert.title,
+        count: count,
+        price: Price
+      }));
       let data = {
         concertId: id,
         concertName: concert.title,

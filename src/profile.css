@@ -1,0 +1,97 @@
+/* Modern and elegant profile page styles */
+.profile-container {
+  margin-top: 2rem;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 32px 0 rgba(60,72,88,0.12);
+  padding: 2.5rem 2rem 2rem 2rem;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.profile-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2.5rem;
+}
+.profile-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #e0e6ed;
+  box-shadow: 0 2px 8px 0 rgba(60,72,88,0.10);
+  background: #f6f8fa;
+}
+.profile-upload {
+  margin-top: 12px;
+}
+.profile-header-info {
+  margin-left: 36px;
+}
+.profile-header-info h4 {
+  margin-bottom: 0.5rem;
+  color: #2d3748;
+  font-weight: 700;
+}
+.last-booking-box {
+  margin-bottom: 2rem;
+  padding: 1.2rem 1.5rem;
+  border-radius: 12px;
+  background: linear-gradient(90deg, #f8fafc 60%, #e3e8ee 100%);
+  border: 1.5px solid #e0e6ed;
+  box-shadow: 0 2px 8px 0 rgba(60,72,88,0.07);
+}
+.last-booking-box h5 {
+  color: #4f46e5;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.last-booking-box div {
+  color: #374151;
+  font-size: 1rem;
+  margin-bottom: 0.2rem;
+}
+.tabs-modern .nav-tabs {
+  border-bottom: 2px solid #e0e6ed;
+}
+.tabs-modern .nav-link {
+  color: #64748b;
+  font-weight: 600;
+  border: none;
+  border-radius: 0;
+  padding: 0.75rem 1.5rem;
+  transition: color 0.2s;
+}
+.tabs-modern .nav-link.active {
+  color: #4f46e5;
+  background: #f1f5f9;
+  border-bottom: 2.5px solid #4f46e5;
+}
+.card {
+  border-radius: 14px !important;
+  box-shadow: 0 2px 12px 0 rgba(60,72,88,0.08);
+  border: none !important;
+  background: #f8fafc;
+}
+.card-title {
+  color: #2d3748;
+  font-weight: 700;
+}
+.card-text {
+  color: #475569;
+  font-size: 1rem;
+}
+@media (max-width: 600px) {
+  .profile-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .profile-header-info {
+    margin-left: 0;
+    margin-top: 18px;
+  }
+  .profile-container {
+    padding: 1.2rem 0.5rem 1.5rem 0.5rem;
+  }
+}
