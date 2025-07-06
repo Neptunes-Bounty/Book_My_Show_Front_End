@@ -1,0 +1,185 @@
+/* Modern, clean, and elegant look for the whole website */
+body, html {
+  background: linear-gradient(120deg, #f6f8fa 60%, #e0e7ef 100%);
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  color: #23272f;
+  min-height: 100vh;
+  letter-spacing: 0.01em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #2d3748;
+  font-weight: 700;
+}
+
+.navbar, .navbar-light, .navbar.bg-light {
+  background: rgba(255,255,255,0.95) !important;
+  border-bottom: 1.5px solid #e0e6ed;
+  box-shadow: 0 4px 24px 0 rgba(60,72,88,0.10);
+  backdrop-filter: blur(8px);
+}
+
+.navbar-brand {
+  font-size: 1.6rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  color: #6366f1 !important;
+  text-shadow: 0 2px 8px #e0e7ef;
+}
+
+.navbar .nav-link, .navbar .navbar-nav .nav-link {
+  color: #6366f1 !important;
+  font-weight: 600;
+  font-size: 1.13rem;
+  border-radius: 8px;
+  margin: 0 0.2rem;
+  transition: background 0.2s, color 0.2s;
+}
+
+.navbar .nav-link.active, .navbar .nav-link:focus, .navbar .nav-link:hover {
+  color: #fff !important;
+  background: linear-gradient(90deg, #6366f1 60%, #4f46e5 100%) !important;
+  box-shadow: 0 2px 8px 0 rgba(99,102,241,0.10);
+}
+
+.btn-primary, .btn-danger, .btn-success, .btn-secondary {
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 1.08rem;
+  box-shadow: 0 4px 16px 0 rgba(99,102,241,0.08);
+  padding: 0.65rem 1.5rem;
+  letter-spacing: 0.02em;
+}
+
+.btn-primary {
+  background: linear-gradient(90deg, #6366f1 60%, #4f46e5 100%);
+  border: none;
+}
+
+.btn-danger {
+  background: linear-gradient(90deg, #f43f5e 60%, #be185d 100%);
+  border: none;
+}
+
+.btn-success {
+  background: linear-gradient(90deg, #22d3ee 60%, #0ea5e9 100%);
+  border: none;
+}
+
+.btn-secondary {
+  background: #64748b;
+  border: none;
+}
+
+.form-control, .form-select {
+  border-radius: 10px;
+  border: 1.5px solid #e0e6ed;
+  background: #f8fafc;
+  color: #23272f;
+  font-size: 1.05rem;
+  box-shadow: 0 2px 8px 0 rgba(60,72,88,0.04);
+  transition: border 0.2s, box-shadow 0.2s;
+}
+
+.form-control:focus, .form-select:focus {
+  border-color: #6366f1;
+  background: #fff;
+  box-shadow: 0 2px 12px 0 rgba(99,102,241,0.10);
+}
+
+.card {
+  border-radius: 18px !important;
+  box-shadow: 0 4px 24px 0 rgba(60,72,88,0.10);
+  border: none !important;
+  background: linear-gradient(120deg, #fff 80%, #f1f5f9 100%);
+  margin-bottom: 1.7rem;
+  transition: box-shadow 0.2s;
+}
+.card:hover {
+  box-shadow: 0 8px 32px 0 rgba(99,102,241,0.13);
+  transform: translateY(-2px) scale(1.01);
+}
+.card-title {
+  color: #2d3748;
+  font-weight: 800;
+  font-size: 1.18rem;
+}
+.card-text {
+  color: #475569;
+  font-size: 1.05rem;
+}
+
+.container, .profile-container {
+  background: rgba(255,255,255,0.98);
+  border-radius: 22px;
+  box-shadow: 0 8px 40px 0 rgba(99,102,241,0.10);
+  padding: 2.7rem 2.2rem 2.2rem 2.2rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2.2rem;
+}
+
+.tabs-modern .nav-tabs {
+  border-bottom: 2.5px solid #e0e6ed;
+}
+.tabs-modern .nav-link {
+  color: #64748b;
+  font-weight: 700;
+  border: none;
+  border-radius: 0;
+  padding: 0.85rem 1.7rem;
+  font-size: 1.08rem;
+  transition: color 0.2s, background 0.2s;
+}
+.tabs-modern .nav-link.active {
+  color: #4f46e5;
+  background: #f1f5f9;
+  border-bottom: 3px solid #4f46e5;
+  font-weight: 800;
+}
+
+.showcase, .row-container, .movie-screen, .seat, .subtitle, .text-wrapper, .text, #button, #w {
+  /* Inherit modern look from global styles */
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #e0e6ed;
+  border-radius: 8px;
+}
+
+input[type="file"]::-webkit-file-upload-button {
+  background: #6366f1;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-right: 10px;
+  transition: background 0.2s;
+}
+input[type="file"]::-webkit-file-upload-button:hover {
+  background: #4f46e5;
+}
+
+@media (max-width: 900px) {
+  .container, .profile-container {
+    padding: 1.2rem 0.5rem 1.5rem 0.5rem;
+  }
+}
+@media (max-width: 600px) {
+  .navbar, .navbar-light, .navbar.bg-light {
+    padding: 0.5rem 0.5rem;
+  }
+  .container, .profile-container {
+    padding: 0.5rem 0.2rem 1rem 0.2rem;
+  }
+  .card {
+    padding: 0.5rem 0.2rem 1rem 0.2rem;
+  }
+}

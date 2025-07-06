@@ -7,7 +7,6 @@ import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
 import Button from 'react-bootstrap/Button';
 import axios from 'axios';
-import '../profile.css';
 
 export default function Profile() {
   const [profilePic, setProfilePic] = useState(null);
@@ -39,36 +38,36 @@ export default function Profile() {
   }
 
   return (
-    <div className="profile-container">
+    <Container style={{ marginTop: '2rem' }}>
       <h1>My Profile</h1>
       {lastBooking && (
-        <div className="last-booking-box">
-          <h5>Last Booking</h5>
+        <div style={{marginBottom: 30, padding: 16, border: '2px solid #eee', borderRadius: 10, background: '#fafbfc'}}>
+          <h5 style={{marginBottom: 8}}>Last Booking</h5>
           <div><b>Type:</b> {lastBooking.type}</div>
           <div><b>Name:</b> {lastBooking.name}</div>
           <div><b>Seats:</b> {lastBooking.count}</div>
           <div><b>Total Price:</b> ₹{lastBooking.price}</div>
         </div>
       )}
-      <div className="profile-header">
+      <div style={{ display: 'flex', alignItems: 'center', marginBottom: 30 }}>
         <div>
           <img
             src={preview || 'https://www.w3schools.com/howto/img_avatar.png'}
             alt="Profile"
-            className="profile-avatar"
+            style={{ width: 120, height: 120, borderRadius: '50%', objectFit: 'cover', border: '2px solid #ccc' }}
           />
-          <div className="profile-upload">
+          <div style={{ marginTop: 10 }}>
             <input type="file" accept="image/*" onChange={handlePicChange} />
           </div>
         </div>
-        <div className="profile-header-info">
+        <div style={{ marginLeft: 30 }}>
           <h4>Transaction History / Bookings</h4>
         </div>
       </div>
       {loading ? (
         <div>Loading your bookings...</div>
       ) : (
-        <Tabs defaultActiveKey="movies" className="mb-3 tabs-modern">
+        <Tabs defaultActiveKey="movies" className="mb-3">
           <Tab eventKey="movies" title="Movies">
             <Row xs={1} md={2} lg={3} className="g-4">
               {tickets.movies.map((ticket, idx) => (
@@ -124,6 +123,6 @@ export default function Profile() {
           )}
         </Tabs>
       )}
-    </div>
+    </Container>
   );
 }
