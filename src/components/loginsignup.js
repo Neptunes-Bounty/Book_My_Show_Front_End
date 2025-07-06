@@ -20,10 +20,11 @@ export default function Login() {
       .post("https://book-my-show-back-end.onrender.com//login", {
         username: username,
         password: password,
+        balance: 50000, // Give user 50000 on login (if backend supports)
       })
       .then((response) => {
-       setafterlogin(response.data);
-      })
+        setafterlogin(response.data);
+      });
   }
   return (
     <Form
@@ -39,7 +40,7 @@ export default function Login() {
         <Form.Label>Username</Form.Label>
         <Form.Control
           onChange={username1}
-          type="nme"
+          type="text"
           placeholder="Enter Username"
         />
       </Form.Group>
@@ -55,7 +56,7 @@ export default function Login() {
       <Button variant="primary" type="submit" onClick={submit}>
         Submit
       </Button>
-      
+
       <Link to="/signup">
         <Button style={{ marginLeft: "10px" }} variant="secondary">
           SignUp

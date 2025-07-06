@@ -89,10 +89,11 @@ function Movies() {
               <Card.Body>
                 <Card.Title>Drishyam 2</Card.Title>
                 <Card.Text>This is a wider card with s</Card.Text>
-                <Button style={{ cursor: "pointer" }} variant="danger">
-                  {" "}
-                  Book
-                </Button>
+                <Link to="/bookingdrishyam2">
+                  <Button style={{ cursor: "pointer" }} variant="danger">
+                    Book
+                  </Button>
+                </Link>
               </Card.Body>
             </Card>
           </CardGroup>

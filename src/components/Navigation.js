@@ -30,6 +30,9 @@ function Navigation() {
                 <Nav.Link href="/movies">Movies</Nav.Link>
               </Nav.Item>
               <Nav.Item>
+                <Nav.Link href="/concerts">Concerts</Nav.Link>
+              </Nav.Item>
+              <Nav.Item>
                 <Nav.Link eventKey="link-1">Stream</Nav.Link>
               </Nav.Item>
               <Nav.Item>

@@ -44,6 +44,7 @@ export default function SignUp() {
         city: city,
         number: number,
         username: username,
+        balance: 50000, // Give user 50000 on signup
       })
       .then((response) => {
         console.log(response);

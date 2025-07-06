@@ -5,12 +5,23 @@ import Image1 from "../images/movies_screen/screen.png";
 import gsap from "gsap";
 import { useNavigate } from "react-router-dom";
 
-
 export default function Bookticket(props) {
   const ref = useRef(null);
   console.log(ref);
   const [count, setCount] = useState(0);
   const [Price, setPrice] = useState(0);
+  const [userBalance, setUserBalance] = useState(50000);
+
+  React.useEffect(() => {
+    fetch("https://book-my-show-back-end.onrender.com/user-balance", {
+      credentials: "include",
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.balance !== undefined) setUserBalance(data.balance);
+      });
+  }, []);
+
   function changecolor(e) {
     if (e.target.className !== "row") {
       if (e.target.style.background !== "green") {
@@ -30,27 +41,33 @@ export default function Bookticket(props) {
 
   function buttonanimation(e2) {
     if (clicked === false && count !== 0) {
+      if (Price > userBalance) {
+        alert("Insufficient balance!");
+        return;
+      }
       clicked = true;
       e2.target.innerText = "";
       tl.to("#button", { width: "50px", duration: 0.5 });
       tl.to(ref, { y: "0%", duration: 0.5 });
-      console.log(e2);
       setTimeout(() => {
         navigate("/");
       }, 3000);
+      let data = {
+        MovieName: props.name,
+        Price: Price,
+        count: count,
+      };
+      let fetchoption = {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      };
+      fetch(`https://book-my-show-back-end.onrender.com/booking${props.name}`, fetchoption).then(
+        () => {
+          setUserBalance((prev) => prev - Price);
+        }
+      );
     }
-    let data = {
-      MovieName: props.name,
-      Price: Price,
-      "count ": count,
-    };
-    let fetchoption = {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(data),
-    };
-
-    fetch(`https://book-my-show-back-end.onrender.com/booking${props.name}`, fetchoption);
   }
 
   return (
