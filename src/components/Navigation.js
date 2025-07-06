@@ -33,26 +33,23 @@ function Navigation() {
                 <Nav.Link href="/concerts">Concerts</Nav.Link>
               </Nav.Item>
               <Nav.Item>
-                <Nav.Link eventKey="link-1">Stream</Nav.Link>
+                <Nav.Link href="/trains">Trains</Nav.Link>
               </Nav.Item>
               <Nav.Item>
-                <Nav.Link eventKey="link-2">Event</Nav.Link>
-              </Nav.Item>
-              <Nav.Item>
-                <Nav.Link eventKey="link-3">Plays</Nav.Link>
+                <Nav.Link href="my-tickets">MyTickets</Nav.Link>
               </Nav.Item>
             </Nav>
           </Col>
           <Col>
             <Nav className="justify-content-center" activeKey="/home">
               <Nav.Item>
-                <Nav.Link href="/home">List Your Shows</Nav.Link>
+                <Nav.Link href="/future-integration">Dashboard</Nav.Link>
               </Nav.Item>
               <Nav.Item>
-                <Nav.Link eventKey="link-1">Gift Card</Nav.Link>
+                <Nav.Link href="/future-integration">Payments</Nav.Link>
               </Nav.Item>
               <Nav.Item>
-                <Nav.Link eventKey="link-2">Offers</Nav.Link>
+                <Nav.Link href="/future-integration">Download Tickets</Nav.Link>
               </Nav.Item>
 
               <Nav.Item>

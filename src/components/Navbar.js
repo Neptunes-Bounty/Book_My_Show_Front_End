@@ -21,7 +21,7 @@ function Navbar1() {
       {[false].map((expand) => (
         <Navbar key={expand} bg="light" expand={expand} className="mb-3">
           <Container fluid>
-            <Navbar.Brand href="#">BookMyShow</Navbar.Brand>
+            <Navbar.Brand href="#">TicketMaestro</Navbar.Brand>
             <div style={{marginRight: 20, fontWeight: 600, color: '#2d2d2d'}}>Balance: ₹{balance.toLocaleString()}</div>
             <Form className="d-flex">
               <Form.Control
@@ -40,7 +40,7 @@ function Navbar1() {
             >
               <Offcanvas.Header closeButton>
                 <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
-                  Offcanvas
+                  TicketMaestro
                 </Offcanvas.Title>
               </Offcanvas.Header>
 
@@ -60,7 +60,7 @@ function Navbar1() {
                     </NavDropdown.Item>
                     <NavDropdown.Divider />
                     <NavDropdown.Item href="#action5">
-                      Notification
+                      Delta Force FTW!
                     </NavDropdown.Item>
                   </NavDropdown>
                 </Nav>

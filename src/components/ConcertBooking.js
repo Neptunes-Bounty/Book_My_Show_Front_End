@@ -8,18 +8,23 @@ import { useNavigate, useParams } from "react-router-dom";
 const concerts = [
   {
     id: 1,
-    title: "Rock Festival 2025",
-    price: 200
+    title: "Ed Sheeran Mathematics Tour",
+    price: 4500
   },
   {
     id: 2,
-    title: "Jazz Night",
-    price: 150
+    title: "Taylor Swift Eras Tour",
+    price: 5000
   },
   {
     id: 3,
-    title: "EDM Fest",
-    price: 180
+    title: "A.R. Rahman Live",
+    price: 3000
+  },
+  {
+    id: 4,
+    title: "Arijit Singh Live in Concert",
+    price: 2500
   }
 ];
 

@@ -8,17 +8,26 @@ const trains = [
   {
     id: 1,
     name: "Rajdhani Express",
-    price: 1200
+    number: "12951",
+    price: 2200
   },
   {
     id: 2,
     name: "Shatabdi Express",
-    price: 900
+    number: "12009",
+    price: 1500
   },
   {
     id: 3,
+    name: "Vande Bharat Express",
+    number: "22201",
+    price: 1800
+  },
+  {
+    id: 4,
     name: "Duronto Express",
-    price: 1500
+    number: "12264",
+    price: 2000
   }
 ];
 
@@ -28,6 +37,15 @@ export default function TrainBooking() {
   const ref = useRef(null);
   const [count, setCount] = useState(0);
   const [Price, setPrice] = useState(0);
+  const [userBalance, setUserBalance] = useState(50000);
+
+  React.useEffect(() => {
+    fetch('https://book-my-show-back-end.onrender.com/user-balance', { credentials: 'include' })
+      .then(res => res.json())
+      .then(data => {
+        if (data.balance !== undefined) setUserBalance(data.balance);
+      });
+  }, []);
 
   function changecolor(e) {
     if (e.target.className !== "row") {
