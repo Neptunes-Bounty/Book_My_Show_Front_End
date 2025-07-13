@@ -1,5 +1,5 @@
 import Button from "react-bootstrap/Button";
-import Card from "react-bootstrap/CardGroup";
+import Card from "react-bootstrap/Card";
 import CardGroup from "react-bootstrap/CardGroup";
 import { Link } from "react-router-dom";
 import React from "react";
