@@ -16,12 +16,14 @@ import TrainBooking from "./components/TrainBooking";
 import Profile from "./components/Profile";
 function App() {
   return (
+    <>
+      <Navbar1 />
       <Routes>
-        <Route  path="/" element={<><Navbar1 /><Navigation/><Slider /><Movies />  </>}/>
-        <Route  path="/movies" element= {<Movies />} />
-        <Route  path="/concerts" element= {<Concerts />} />
-        <Route  path="/booking-concert/:id" element= {<ConcertBooking />} />
-        <Route  path="/my-tickets" element= {<MyTickets />} />
+        <Route path="/" element={<><Navigation/><Slider /><Movies />  </>} />
+        <Route path="/movies" element={<Movies />} />
+        <Route path="/concerts" element={<Concerts />} />
+        <Route path="/booking-concert/:id" element={<ConcertBooking />} />
+        <Route path="/my-tickets" element={<MyTickets />} />
         <Route path="/bookingramsetu" element={<Bookticket name="ramsetu" />} />
         <Route path="/bookingblack" element={<Bookticket name="black" />} />
         <Route path="/bookingthemenu" element={<Bookticket name="themenu" />} />
@@ -32,11 +34,12 @@ function App() {
         <Route path="/bookingsunny" element={<Bookticket name="sunny" />} />
         <Route path="/bookingkantara" element={<Bookticket name="kantara" />} />
         <Route path="/bookingshesad" element={<Bookticket name="shesad" />} />
-        <Route path="/signup" element= {<SignUp />} />
+        <Route path="/signup" element={<SignUp />} />
         <Route path="/trains" element={<Trains />} />
         <Route path="/booking-train/:id" element={<TrainBooking />} />
         <Route path="/profile" element={<Profile />} />
       </Routes>
+    </>
   );
 }
 
