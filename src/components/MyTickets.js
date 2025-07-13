@@ -12,7 +12,6 @@ export default function MyTickets() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Fetch user's tickets when component mounts
     axios.get('https://book-my-show-back-end.onrender.com/my-tickets')
       .then(response => {
         setTickets(response.data);

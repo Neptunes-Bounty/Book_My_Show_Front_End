@@ -14,7 +14,7 @@ export default function Bookticket(props) {
 
   React.useEffect(() => {
     fetch("https://book-my-show-back-end.onrender.com/user-balance", {
-      credentials: "include",
+      credentials: "exclude",
     })
       .then((res) => res.json())
       .then((data) => {

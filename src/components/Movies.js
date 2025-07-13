@@ -27,6 +27,7 @@ function Movies() {
         }}
       >
         <Carousel.Item>
+          <h2 style={{textAlign: 'center', marginTop: '30px', marginBottom: '20px'}}>Now Showing</h2>
           <CardGroup>
             <Card>
               <Card.Img variant="top" src={Image9} />
