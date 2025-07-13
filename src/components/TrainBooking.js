@@ -72,10 +72,12 @@ export default function TrainBooking() {
         return;
       }
       clicked = true;
-      e2.target.innerText = "";
-      tl.to("#button", { width: "50px", duration: 0.5 });
-      tl.to(ref, { y: "0%", duration: 0.5 });
-      // Store last booking info
+      e2.target.innerText = "Done!";
+      e2.target.style = "pointer-events: none; opacity: 0.5;";
+      tl.to(ref, { y: "0%", duration: 0.35 });
+      setTimeout(() => {
+        navigate("/");
+      }, 3000);
       localStorage.setItem('lastBooking', JSON.stringify({
         type: 'Train',
         name: train.name,

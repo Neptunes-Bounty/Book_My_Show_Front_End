@@ -46,9 +46,9 @@ export default function Bookticket(props) {
         return;
       }
       clicked = true;
-      e2.target.innerText = "";
-      tl.to("#button", { width: "50px", duration: 0.5 });
-      tl.to(ref, { y: "0%", duration: 0.5 });
+      e2.target.innerText = "Done!";
+      e2.target.style = "pointer-events: none; opacity: 0.5;";
+      tl.to(ref, { y: "0%", duration: 0.35 });
       setTimeout(() => {
         navigate("/");
       }, 3000);
