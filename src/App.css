@@ -4,4 +4,5 @@
 
 .carousel-inner .carousel-control-prev{
   display: none;
+  z-index: 1 !important;
 }

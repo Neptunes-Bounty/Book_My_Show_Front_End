@@ -46,21 +46,22 @@ const concerts = [
 function Concerts() {
   return (
     <>
-      <h2 style={{textAlign: 'center', marginTop: '30px', marginBottom: '20px'}}>Upcoming Concerts</h2>
+      <h2 style={{textAlign: 'center', marginTop: '30px', marginBottom: '20px', fontWeight: 700, fontSize: 32, color: '#2d2d2d'}}>Upcoming Concerts</h2>
       <div style={{maxWidth: '1200px', margin: '0 auto', padding: '0 15px'}}>
         <CardGroup>
           {concerts.map((concert) => (
-            <Card key={concert.id} className="m-2">
-              <Card.Body>
-                <Card.Title>{concert.title}</Card.Title>
-                <Card.Text>
+            <Card key={concert.id} className="m-3 shadow-lg" style={{borderRadius: 18, overflow: 'hidden', minWidth: 280}}>
+              <Card.Img variant="top" src={concert.image} alt={concert.title} style={{height: 220, objectFit: 'cover'}} />
+              <Card.Body style={{background: '#f8f9fa', borderRadius: 18}}>
+                <Card.Title style={{fontWeight: 600, fontSize: 22}}>{concert.title}</Card.Title>
+                <Card.Text style={{fontSize: 16, color: '#444'}}>
                   {concert.description}<br/>
                   <strong>Date:</strong> {concert.date}<br/>
                   <strong>Venue:</strong> {concert.venue}<br/>
-                  <strong>Price:</strong> ₹{concert.price}
+                  <strong>Price:</strong> <span style={{color: '#d6336c'}}>₹{concert.price}</span>
                 </Card.Text>
                 <Link to={`/booking-concert/${concert.id}`}>
-                  <Button style={{ cursor: "pointer" }} variant="danger">
+                  <Button style={{ cursor: "pointer", borderRadius: 8, fontWeight: 500, fontSize: 16, padding: '8px 24px', background: 'linear-gradient(90deg,#d6336c,#fbb034)' }} variant="danger">
                     Book Now
                   </Button>
                 </Link>
